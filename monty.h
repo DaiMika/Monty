@@ -41,19 +41,19 @@ typedef struct instruction_s
 stack_t *createNode(int value);
 void process_file(char *filen, stack_t **head);
 int is_valid_instruction(const char *instruction);
-void printList(stack_t *head);
+void _execute(char *opcode, stack_t **head, int line_number, char *argument);
 void freeList(stack_t *head);
-void processInstruction(stack_t **stack, char *instruction, unsigned int line_number);
-void handleErrors(FILE *file, char *line, int status);
-void push(stack_t **head, int value);
 char *is_arg_integer(int line_number, char *argument);
-void push_to_stack(stack_t **top, int line_number, char *argument);
-void display_stack(stack_t **top);
+void push(stack_t **top, int line_number, char *argument);
+void pall(stack_t **top);
 void pint(stack_t **head, int line_number);
 void pop(stack_t **head, int line_number);
 void swap(stack_t **head, int line_number);
 void add(stack_t **head, int line_number);
 void nop(stack_t **head, int counter);
-void _execute(char *opcode, stack_t **head, int line_number, char *argument);
+void sub(stack_t **head, int line_number);
+void division(stack_t **head, int line_number);
+void mul(stack_t **head, int line_number);
+void mod(stack_t **head, int line_number);
 #endif
 

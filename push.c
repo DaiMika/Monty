@@ -7,7 +7,7 @@
  *@argument: a value to store in a list
  */
 
-void push_to_stack(stack_t **head, int line_number, char *argument)
+void push(stack_t **head, int line_number, char *argument)
 {
 	stack_t *newnode = NULL;
 	char *checked_argument;
@@ -80,7 +80,7 @@ char *is_arg_integer(int line_number, char *argument)
  *@head: a doubly linked list
  */
 
-void display_stack(stack_t **head)
+void pall(stack_t **head)
 {
 	stack_t *temp = *head;
 

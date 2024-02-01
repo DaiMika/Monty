@@ -98,11 +98,11 @@ void _execute(char *opcode, stack_t **head, int line_number, char *argument)
 {
 	if (strcmp(opcode, "push") == 0)
 	{
-		push_to_stack(head, line_number, argument);
+		push(head, line_number, argument);
 	}
 	else if (strcmp(opcode, "pall") == 0)
 	{
-		display_stack(head);
+		pall(head);
 	}
 	else if (strcmp(opcode, "pint") == 0)
 	{
@@ -124,4 +124,21 @@ void _execute(char *opcode, stack_t **head, int line_number, char *argument)
 	{
 		nop(head, line_number);
 	}
+	else if (strcmp(opcode, "sub") == 0)
+	{
+		sub(head, line_number);
+	}
+	else if (strcmp(opcode, "div") == 0)
+	{
+		division(head, line_number);
+	}
+	else if (strcmp(opcode, "mul") == 0)
+	{
+		mul(head, line_number);
+	}
+	else if (strcmp(opcode, "mod") == 0)
+	{
+		mod(head, line_number);
+	}
+
 }
